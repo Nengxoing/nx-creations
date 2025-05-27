@@ -1,0 +1,128 @@
+.port-items .item {
+    width: 100%;
+    height: 280px;
+}
+
+.port-items .image-box {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.port-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.port-items .image-box .text-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-color);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Gradient ที่พื้นหลัง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateY(100%);
+    transition: transform .5s ease;
+}
+
+.port-items .image-box:hover img{
+    transform: scale(1.1);
+}
+
+.port-items .image-box:hover .text-box {
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.port-items .name {
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.port-items .image-box .text-box .title {
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(100%);
+}
+
+.port-items .image-box:hover .text-box .title {
+    transition-delay: 0.1s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.port-items .image-box .text-box .description {
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(100%);
+}
+
+.port-items .image-box:hover .text-box .description {
+    transition-delay: 0.1s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (min-width: 360px) {
+
+    .portfolios-container {
+        text-align: center;
+        margin-top: 1rem;
+        padding: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .portfolios-container h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .portfolios-container .port-items {
+        margin-top: 1rem;
+        display: grid;
+        grid-row-gap: 6rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .portfolios-container {
+        padding: 0 4rem;
+        margin: 6rem 0;
+    }
+
+    .portfolios-container .port-items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+
+    .portfolios-container h1 {
+        font-size: 3rem;
+    }
+    
+    .port-items .name {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .portfolios-container .port-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

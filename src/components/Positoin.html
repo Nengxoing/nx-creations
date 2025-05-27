@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text on Image</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .text-container {
+            position: relative;
+            margin-top: 6rem;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 300px;
+            background-color: yellow;
+            overflow: hidden;
+        }
+
+        .text-container img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform .5s ease;
+        }
+
+        .text-container:hover img {
+            transform: scale(1.1);
+        }
+
+        .text-container .text-box {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            padding: 4rem 0;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+            transform: translateY(100%);
+            transition: transform .5s ease;
+        }
+
+        .text-container:hover .text-box {
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <img src="/public/images/HeroS.jpg" alt="">
+        <div class="text-box">
+            <h2>I LOVE YOU</h2>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #050C9C;
+    --secondary-color: #FFC700;
+    --text-color: #fff;
+    --secondary-text-color: #5356FF;
+    --background-color: #f1f1f1;
+    --dark-color: #111;
+    --dark-lg-background: (rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
