@@ -68,7 +68,15 @@ function About() {
         </div>
 
         <div className="about-btn">
-            <button>View full Resume</button>
+            <a
+                href="/Nengxiong CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <button>
+                    View full Resume
+                </button>
+            </a>
         </div>
     </div>
   )
