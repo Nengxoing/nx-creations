@@ -69,7 +69,7 @@ function About() {
 
         <div className="about-btn">
             <a
-                href="/Nengxiong CV.pdf"
+                href="/Nengxiong Curriculum Vitae.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
